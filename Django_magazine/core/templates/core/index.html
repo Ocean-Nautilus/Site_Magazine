@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'core.css' %}">
+
+<section class="banner">
+
+    <header>
+        <a>Главная</a>
+        <a>Каталог</a>
+        <a>Коллекция</a>
+        <a>О нас</a>
+
+        <a>🔍</a>
+        <a><img id="ava" src="{% static 'Material/div.png' %}"></a>
+        <a>♥</a>
+        <a>🛒</a>
+    </header>
+
+    <div class="slog">
+           <div class=inform>
+                <h1>ИСКУССТВО<br>
+                    НА НОВОЙ<br>
+                    ВЫСОТЕ</h1>
+
+                <p>Авторские постеры для вашего пространства,<br>
+                    вдохновлённые цифровой эстетикой.</p>
+
+                <div class='but'>
+                    <button id="colorid">СМОТРЕТЬ КАТАЛОГ</button>
+                    <button>КОЛЛЕКЦИИ</button>
+                </div>
+
+            </div>
+        <img src="{% static 'Material/div.png' %}" alt="Баннер">
+    </div>
+
+
+</section>
+
+
+{% endblock %}

@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="catalog-grid">
+    {% for product in products %}
+        {% include 'includes/product_card.html' %}
+    {% endfor %}
+</div>
+{% endblock %}
