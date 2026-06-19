@@ -2,42 +2,62 @@
 {% load static %}
 
 {% block content %}
-<link rel="stylesheet" href="{% static 'core.css' %}">
-
-<section class="banner">
-
-    <header>
-        <a>Главная</a>
-        <a>Каталог</a>
-        <a>Коллекция</a>
-        <a>О нас</a>
-
-        <a>🔍</a>
-        <a><img id="ava" src="{% static 'Material/div.png' %}"></a>
-        <a>♥</a>
-        <a>🛒</a>
-    </header>
-
-    <div class="slog">
-           <div class=inform>
-                <h1>ИСКУССТВО<br>
-                    НА НОВОЙ<br>
-                    ВЫСОТЕ</h1>
-
-                <p>Авторские постеры для вашего пространства,<br>
-                    вдохновлённые цифровой эстетикой.</p>
-
-                <div class='but'>
-                    <button id="colorid">СМОТРЕТЬ КАТАЛОГ</button>
-                    <button>КОЛЛЕКЦИИ</button>
-                </div>
-
+<div class="wrapper">
+    <section class="main-banner">
+        <div class="banner-text">
+            <h1>ИСКУССТВО НА НОВОЙ ВЫСОТЕ</h1>
+            <p>Авторские постеры для вашего пространства, вдохновлённые цифровой эстетикой.</p>
+            <div class="controls">
+                <button class="btn-main">СМОТРЕТЬ КАТАЛОГ</button>
+                <button class="btn-secondary">КОЛЛЕКЦИИ</button>
             </div>
-        <img src="{% static 'Material/div.png' %}" alt="Баннер">
-    </div>
+        </div>
+        <div class="banner-image">
+            <img src="{% static 'Material/div.png' %}" alt="Mountain Art">
+        </div>
+    </section>
 
+    <section class="collections">
+        <h2>ПОПУЛЯРНЫЕ КОЛЛЕКЦИИ</h2>
+        <div class="grid">
+            <div class="card">Автомобили</div>
+            <div class="card">Природа</div>
+            <div class="card">Город</div>
+            <div class="card">Минимализм</div>
+        </div>
+    </section>
 
-</section>
+    <section class="hits">
+        <div class="hits-header">
+            <h2>ХИТЫ ПРОДАЖ</h2>
+            <a href="/catalog" class="view-all">СМОТРЕТЬ ВСЕ →</a>
+        </div>
+        <div class="hits-grid">
+            <div class="product-card">
+                <div class="img-placeholder"></div>
+                <h3>F1 Audi Revolut</h3>
+                <p class="price">400 ₽</p>
+                <button class="btn-cart">В корзину</button>
+            </div>
+            <div class="product-card">
+                <div class="img-placeholder"></div>
+                <h3>F1 Шарль Леклер</h3>
+                <p class="price">400 ₽</p>
+                <button class="btn-cart">В корзину</button>
+            </div>
+        </div>
+    </section>
 
-
+    <section class="newsletter">
+        <div class="newsletter-content">
+            <h3>Будьте в курсе новинок и скидок</h3>
+            <p>Подпишитесь на нашу рассылку и получайте бонусы</p>
+            <form>
+                <input type="email" placeholder="Ваш e-mail">
+                <button type="submit">ПОДПИСАТЬСЯ</button>
+            </form>
+        </div>
+    </section>
+    
+</div>
 {% endblock %}

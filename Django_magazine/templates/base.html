@@ -2,22 +2,46 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&family=Unbounded:wght@400;700&display=swap" rel="stylesheet">
-
+    <meta charset="UTF-8">
     <link rel="stylesheet" href="{% static 'style.css' %}">
+    <title>Pixel Peak</title>
 </head>
 <body>
-    <header>
+    <header class="main-header">
+        <div class="logo">PIXEL PEAK</div>
+        <nav>
+            <a href="/">Главная</a>
+            <a href="/catalog">Каталог</a>
+            <a href="/collections">Коллекции</a>
+            <a href="/about">О нас</a>
+        </nav>
+        <div class="header-icons">
+            <span>🔍</span> <span>👤</span> <span>❤️</span> <span>🛒(0)</span>
+        </div>
     </header>
 
-    <div class="container">
+    <main>
         {% block content %}
         {% endblock %}
-    </div>
-    
-    <footer>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-info">
+                <h4>PIXEL PEAK</h4>
+                <p>Авторские постеры для вашего пространства, вдохновленные цифровой эстетикой</p>
+            </div>
+            <div class="footer-links">
+                <h4>ПОМОЩЬ</h4>
+                <a href="#">Доставка</a><a href="#">Гарантии</a>
+            </div>
+            <div class="footer-contacts">
+                <h4>КОНТАКТЫ</h4>
+                <p>+7 (999) 123-45-67</p>
+                <p>support@pixelpeak.ru</p>
+            </div>
+        </div>
+        <div class="footer-bottom">© 2026 Pixel Peak. Все права защищены.</div>
     </footer>
 </body>
 </html>
