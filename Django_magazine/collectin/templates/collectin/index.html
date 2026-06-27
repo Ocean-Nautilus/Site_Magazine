@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'collectin/collectin.css' %}">
+
+<div class="wrapper">
+    <div class="collections-header">
+        <h1>КОЛЛЕКЦИИ</h1>
+        <p>Серии работ от приглашённых художников. Каждая коллекция — это законченная история, рассказанная через цвет, форму и текстуру.</p>
+    </div>
+
+    <div class="collections-page-grid">
+        <div class="col-page-card" style="background: linear-gradient(135deg, #2a1129, #880e4f);">
+            <h3>Автомобили</h3>
+            <p>24 постера</p>
+        </div>
+        <div class="col-page-card" style="background: linear-gradient(135deg, #2a1129, #d81b60);">
+            <h3>Природа</h3>
+            <p>32 постера</p>
+        </div>
+        <div class="col-page-card" style="background: linear-gradient(135deg, #0a1129, #4f0e88);">
+            <h3>Город</h3>
+            <p>18 постеров</p>
+        </div>
+        <div class="col-page-card" style="background: #e1bee7; color: #333;">
+            <h3>Минимализм</h3>
+            <p>12 постеров</p>
+        </div>
+        <div class="col-page-card" style="background: linear-gradient(135deg, #880e4f, #d81b60);">
+            <h3>Люди</h3>
+            <p>16 постеров</p>
+        </div>
+        <div class="col-page-card" style="background: linear-gradient(135deg, #2a1129, #4f0e88);">
+            <h3>Абстракция</h3>
+            <p>28 постеров</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

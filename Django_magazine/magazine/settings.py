@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'catalog',
     'core',
     'users',
+    'collectin',
 ]
 
 MIDDLEWARE = [

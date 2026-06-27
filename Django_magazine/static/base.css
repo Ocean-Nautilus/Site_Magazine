@@ -1,0 +1,120 @@
+/* Сброс стилей */
+* { 
+    box-sizing: border-box;
+    margin: 0; 
+    padding: 0; 
+}
+
+a {
+    color: #880e4f;
+}
+
+body { 
+    font-family: 'Montserrat', sans-serif; 
+    font-weight: 700;
+    min-height: 100vh;
+    background: linear-gradient(#fac7d9, #fff0f5) no-repeat;
+    background-attachment: fixed; 
+    color: #333; 
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px; 
+}
+
+/* Шапка */
+.main-header { 
+    background: #fff0f5;
+    border-bottom: 1px solid #eee;
+    width: 100%;
+}
+
+.header_size {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 20px; /* Добавим отступы по бокам */
+    display: flex;             /* Включаем Flex */
+    justify-content: space-between; /* Лого слева, остальное справа */
+    align-items: center;       /* Выравнивание по вертикали */
+}
+
+.logo img{ 
+    width: 100px;
+    height: 80px;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+.header-icons { 
+    display: flex; 
+    gap: 15px; 
+    cursor: pointer; 
+}
+
+.main-header nav a {
+    text-decoration: none;
+    color: #000;
+    margin: 10px;
+    font-weight: normal;
+    padding-bottom: 5px; /* отступ для подчеркивания */
+    transition: color 0.3s;
+}
+
+/* Активное состояние */
+.main-header nav a.active {
+    color: #880e4f; /* Цвет как у вашего логотипа */
+    border-bottom: 2px solid #880e4f; /* Подчеркивание */
+    font-weight: bold;
+}
+
+/* Подвал */
+.main-footer { 
+    background: #fff0f5; 
+    padding: 50px; 
+}
+
+.logo-footer img {
+    width: 100px;
+    height: 80px;
+}
+
+.footer-content { 
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px; 
+    display: grid; /* Включаем сетку */
+    grid-template-columns: repeat(3, 1fr); /* Создаем 3 равные колонки */
+    gap: 40px; /* Расстояние между колонками */
+    align-items: start; /* Выравнивание по верхнему краю */
+}
+
+.footer-links a { 
+    display: block; 
+    color: #666;
+    text-decoration: none; 
+    margin: 5px 5px 5px 0px;    
+}
+
+.footer-contacts p{
+    margin: 5px 5px 5px 0px; 
+}
+
+.footer-bottom { 
+    text-align: center;
+    margin: 40px;
+    color: #999; 
+    font-size: 0.9rem; 
+}
+
+
+
+
+
+
+
+

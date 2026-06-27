@@ -3,20 +3,25 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Unbounded:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'base.css' %}">
     <title>Pixel Peak</title>
 </head>
 <body>
     <header class="main-header">
-        <div class="logo">PIXEL PEAK</div>
-        <nav>
-            <a href="/">Главная</a>
-            <a href="/catalog">Каталог</a>
-            <a href="/collections">Коллекции</a>
-            <a href="/about">О нас</a>
-        </nav>
-        <div class="header-icons">
-            <span>🔍</span> <span>👤</span> <span>❤️</span> <span>🛒(0)</span>
+        <div class='header_size'> 
+            <div class="logo">
+                <img src="{% static 'Material/logo.png' %}" alt="Logo">
+            </div>
+            <nav>
+                <a href="/" class="{% if request.path == '/' %}active{% endif %}">Главная</a>
+                <a href="/catalog/" class="{% if request.path == '/catalog/' %}active{% endif %}">Каталог</a>
+                <a href="/collections/" class="{% if request.path == '/collections/' %}active{% endif %}">Коллекции</a>
+                <a href="/about/" class="{% if request.path == '/about/' %}active{% endif %}">О нас</a>
+            </nav>
+            <div class="header-icons">
+                <span>🔍</span> <span>👤</span> <span>❤️</span> <span>🛒(0)</span>
+            </div>
         </div>
     </header>
 
@@ -28,12 +33,15 @@
     <footer class="main-footer">
         <div class="footer-content">
             <div class="footer-info">
-                <h4>PIXEL PEAK</h4>
+                <div class="logo-footer">
+                    <img src="{% static 'Material/logo.png' %}" alt="Logo">
+                </div>
                 <p>Авторские постеры для вашего пространства, вдохновленные цифровой эстетикой</p>
             </div>
             <div class="footer-links">
                 <h4>ПОМОЩЬ</h4>
-                <a href="#">Доставка</a><a href="#">Гарантии</a>
+                <a href="#">Доставка</a>
+                <a href="#">Гарантии</a>
             </div>
             <div class="footer-contacts">
                 <h4>КОНТАКТЫ</h4>

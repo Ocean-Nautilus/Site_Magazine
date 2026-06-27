@@ -1,0 +1,46 @@
+.collections-header { 
+    margin: 40px 0; 
+}
+
+.collections-header h1 { 
+    color: #880e4f; 
+    font-size: 2.5rem; 
+    margin-bottom: 15px; 
+}
+
+.collections-header p { 
+    color: #666; 
+    max-width: 600px; 
+}
+
+.collections-page-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 колонки, как на макете */
+    gap: 30px;
+    margin-bottom: 80px;
+}
+
+.col-page-card {
+    height: 250px;
+    padding: 30px;
+    border-radius: 15px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Текст прижат вниз */
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.col-page-card:hover {
+    transform: scale(1.02);
+}
+
+.col-page-card h3 { 
+    font-size: 1.5rem; 
+}
+.col-page-card p { 
+    font-size: 0.9rem; 
+    opacity: 0.8; 
+    font-weight: normal; 
+}

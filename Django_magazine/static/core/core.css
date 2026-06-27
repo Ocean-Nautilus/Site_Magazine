@@ -1,0 +1,217 @@
+/* Баннер */
+.main-banner { 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    padding: 40px 0; 
+}
+.banner-text {
+    max-width: 50%; 
+}
+.banner-text h1 { 
+    font-size: 3.5rem; 
+    color: #880e4f; 
+    margin-bottom: 20px; 
+}
+.banner-image img { 
+    width: 100%; 
+    height: auto; 
+}
+
+p {
+    margin:10px 0px 10px 0px ;
+}
+
+/* Кнопки */
+button {
+    font-family: 'Unbounded', sans-serif;
+}
+
+.btn-main {
+    font-weight: 600;
+    background: #d81b60; 
+    color: #fff; 
+    border: none; 
+    padding: 15px 30px; 
+    margin:10px 0px 10px 0px ;
+    cursor: pointer; 
+    border-radius: 4px; 
+}
+
+.btn-secondary { 
+    font-weight: 600;
+    background: transparent; 
+    border: 1px solid #333; 
+    border-radius: 4px; 
+    padding: 14px 30px; 
+    margin:10px 0px 10px 10px ;
+    cursor: pointer; 
+}
+
+/* Блок статистики под кнопками */
+.banner-stats { 
+    display: flex; 
+    gap: 30px; 
+    margin-top: 30px; 
+}
+
+.banner-stats strong { 
+    font-size: 1.5rem; 
+    color: #880e4f; 
+}
+
+/* Темная полоса преимуществ */
+.banner-features {
+    position: absolute; /* Позиционируем относительно баннера */
+    bottom: 20px;
+    left: 0px;
+    right: 0px;
+    background: #2a1129;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    margin: 10px 0px 10px 0px;
+}
+
+/* Важно: баннер должен иметь position: relative, чтобы полоса приклеилась к нему */
+.main-banner { 
+    position: relative; /* Чтобы .banner-features не улетел в самый низ страницы */
+    padding-bottom: 100px; /* Добавим отступ снизу, чтобы текст не наезжал на полосу */
+}
+
+/* Сетка */
+.collections-page-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 колонки, как в collections */
+    gap: 30px; /* Отступы между карточками */
+    margin-bottom: 80px;
+}
+
+.col-page-card {
+    height: 250px;
+    padding: 30px;
+    border-radius: 15px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Текст прижат вниз */
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.col-page-card:hover {
+    transform: scale(1.02);
+}
+
+.col-page-card h3 { 
+    font-size: 1.5rem; 
+}
+.col-page-card p { 
+    font-size: 0.9rem; 
+    opacity: 0.8; 
+    font-weight: normal; 
+}
+
+/* Стили для Хитов продаж */
+.hits { 
+    padding: 60px 0;
+}
+
+.hits-header {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    margin-bottom: 20px; 
+    text-decoration: none;
+}
+
+.hits-grid { 
+    display: grid; 
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 20px; 
+}
+
+/* Стили для колекций */
+.collectin { 
+    margin: 0px 0px 10px 0px;
+}
+
+.collectin-header {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    margin-bottom: 20px; 
+    text-decoration: none;
+}
+
+.collectin-grid { 
+    display: grid; 
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 20px; 
+}
+
+/* Карточка*/
+.product-card { 
+    background: #fff; 
+    padding: 15px; 
+    border-radius: 10px; 
+    text-align: center; 
+    border: 1px solid #eee; 
+}
+
+.img-placeholder { 
+    height: 200px; 
+    background: #ddd; 
+    margin-bottom: 10px; 
+}
+
+.btn-cart { 
+    background: #d81b60;
+    color: white; 
+    border: none; 
+    padding: 10px; 
+    width: 100%; 
+    cursor: pointer; 
+    border-radius: 4px; 
+}
+
+/* Стили для рассылки */
+.newsletter { 
+    background: #5a0a30; 
+    color: white; padding: 40px; 
+    border-radius: 10px; 
+    margin: 40px 0; 
+}
+
+.newsletter form { 
+    display: flex; 
+    gap: 10px;
+    margin-top: 20px; 
+}
+
+.newsletter input { 
+    padding: 10px;
+     flex-grow: 1; 
+     border-radius: 4px;
+      border: none; 
+}
+
+.newsletter button { 
+    background: #d81b60;
+    color: white; 
+    border: none; 
+    padding: 10px 20px; 
+    cursor: pointer;
+     border-radius: 4px; 
+}
+
+.about-hero {
+    padding: 40px;
+    background: #fff;
+    border-radius: 20px;
+    border: 1px solid #eee;
+}
+

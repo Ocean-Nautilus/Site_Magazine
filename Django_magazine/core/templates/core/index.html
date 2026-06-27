@@ -2,6 +2,8 @@
 {% load static %}
 
 {% block content %}
+<link rel="stylesheet" href="{% static 'core/core.css' %}">
+
 <div class="wrapper">
     <section class="main-banner">
         <div class="banner-text">
@@ -11,20 +13,25 @@
                 <button class="btn-main">СМОТРЕТЬ КАТАЛОГ</button>
                 <button class="btn-secondary">КОЛЛЕКЦИИ</button>
             </div>
+            
+            <div class="banner-stats">
+                <div><strong>2400+</strong><br>довольных клиентов</div>
+                <div><strong>180+</strong><br>авторов</div>
+                <div><strong>4.9</strong><br>средняя оценка</div>
+            </div>
         </div>
+
+        <div class="banner-features">
+            <span>📦 Премиальное качество печати</span>
+            <span>⭐ Эксклюзивные работы</span>
+            <span>🚚 Надежная доставка</span>
+            <span>🔄 Возврат без проблем</span>
+        </div>
+        
         <div class="banner-image">
             <img src="{% static 'Material/div.png' %}" alt="Mountain Art">
         </div>
-    </section>
 
-    <section class="collections">
-        <h2>ПОПУЛЯРНЫЕ КОЛЛЕКЦИИ</h2>
-        <div class="grid">
-            <div class="card">Автомобили</div>
-            <div class="card">Природа</div>
-            <div class="card">Город</div>
-            <div class="card">Минимализм</div>
-        </div>
     </section>
 
     <section class="hits">
@@ -46,6 +53,26 @@
                 <button class="btn-cart">В корзину</button>
             </div>
         </div>
+    </section>
+
+    <section class="collectin">
+        <div class="hits-header">
+            <h2>КОЛЛЕКЦИИ</h2>
+            <a href="/collections/" class="collectin-all">СМОТРЕТЬ ВСЕ →</a>
+        </div>
+        <div class="collections-page-grid">
+            <div class="col-page-card" style="background: linear-gradient(135deg, #2a1129, #880e4f);">
+                <h3>Автомобили</h3>
+                <p>24 постера</p>
+            </div>
+            <div class="col-page-card" style="background: linear-gradient(135deg, #2a1129, #d81b60);">
+                <h3>Природа</h3>
+                <p>32 постера</p>
+            </div>
+            <div class="col-page-card" style="background: linear-gradient(135deg, #0a1129, #4f0e88);">
+                <h3>Город</h3>
+                <p>18 постеров</p>
+            </div>
     </section>
 
     <section class="newsletter">
