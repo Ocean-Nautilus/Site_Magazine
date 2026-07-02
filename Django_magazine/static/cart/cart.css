@@ -1,0 +1,29 @@
+.cart-container {
+    display: flex;
+    gap: 40px;
+    align-items: start; /* Важно для работы sticky */
+}
+
+.cart-items { flex: 2; }
+.cart-summary {
+    flex: 1;
+    position: sticky;
+    top: 20px; /* Прилипает при скролле на 20px от верха */
+    padding: 20px;
+    border: 1px solid #eee;
+    border-radius: 10px;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.item-img { width: 80px; height: 80px; border-radius: 8px; }
+.item-controls { display: flex; gap: 10px; align-items: center; }
+.summary-line { display: flex; justify-content: space-between; margin: 10px 0; }
+.summary-total { font-size: 20px; font-weight: bold; display: flex; justify-content: space-between; margin: 20px 0; }
+.btn-checkout { width: 100%; padding: 15px; background: #d81b60; color: white; border: none; margin-bottom: 10px; cursor: pointer; }

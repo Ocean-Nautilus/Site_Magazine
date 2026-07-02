@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'core/profile.css' %}">
+
+<div class="profile-page wrapper">
+    <section class="profile-header">
+        <div class="avatar-placeholder">
+            <img src="{% static 'images/avatar-default.png' %}" alt="Аватар">
+        </div>
+        <div class="profile-info">
+            <h1>Привет, [Имя пользователя]!</h1>
+            <p>Ваш ID: 12345678</p>
+            <button class="btn-edit">Редактировать профиль</button>
+        </div>
+    </section>
+
+    <section class="profile-recommendations">
+        <h2>ДЛЯ ВАС</h2>
+        <div class="products-grid">
+            {% for product in recommended_products %}
+            <div class="product-card">
+                <h3>{{ product.name }}</h3>
+                <div class="price">{{ product.price }} ₽</div>
+                <button class="btn-cart">В корзину</button>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+</div>
+{% endblock %}

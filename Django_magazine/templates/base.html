@@ -20,7 +20,10 @@
                 <a href="/about/" class="{% if request.path == '/about/' %}active{% endif %}">О нас</a>
             </nav>
             <div class="header-icons">
-                <span>🔍</span> <span>👤</span> <span>❤️</span> <span>🛒(0)</span>
+                <a>🔍</a> 
+                <a href="{% url 'profile' %}" class="{% if request.path == '/profile/' %}active{% endif %}">👤</a> 
+                <a href="{% url 'favorites' %}" class="{% if request.path == '/favorites/' %}active{% endif %}">❤️</a>
+                <a href="{% url 'cart' %}" class="{% if request.path == '/cart/' %}active{% endif %}">🛒(0)</a>
             </div>
         </div>
     </header>

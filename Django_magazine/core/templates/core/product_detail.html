@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'core/product.css' %}">
+
+<div class="product-page wrapper">
+    <div class="product-gallery">
+        <div class="main-image">
+            <img src="{% static 'images/audi-main.jpg' %}" alt="F1 Audi Revolut">
+        </div>
+        <div class="thumbnail-list">
+            <img src="{% static 'images/audi-1.jpg' %}" class="active">
+            <img src="{% static 'images/audi-2.jpg' %}">
+            <img src="{% static 'images/audi-3.jpg' %}">
+        </div>
+    </div>
+
+    <div class="product-info">
+        <span class="category">АВТОМОБИЛИ</span>
+        <h1>F1 AUDI REVOLUT</h1>
+        <div class="rating">★★★★★ <small>4.9 · 142 отзыва</small></div>
+        
+        <p class="description">Авторская работа из серии «природа». Печать на матовой бумаге...</p>
+
+        <div class="size-selector">
+            <p>РАЗМЕР</p>
+            <div class="size-options">
+                <button class="size-btn">21x30 см</button>
+                <button class="size-btn active">50x70 см</button>
+            </div>
+        </div>
+
+        <div class="price-box">
+            <h2>400 ₽</h2>
+            <div class="quantity">
+                <button>-</button> <span>1</span> <button>+</button>
+            </div>
+        </div>
+
+        <div class="actions">
+            <button class="btn-buy">В КОРЗИНУ</button>
+            <button class="btn-heart">♥</button>
+            <button class="btn-share">🔗</button>
+        </div>
+
+        <div class="features">
+            <p>✓ Доставка: 2-5 дней по России</p>
+            <p>✓ Упаковка: В жестком тубусе</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

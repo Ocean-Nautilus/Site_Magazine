@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'cart/cart.css' %}">
+
+<div class="cart-page wrapper">
+    <h1>КОРЗИНА</h1>
+    
+    <div class="cart-container">
+        <div class="cart-items">
+            {% for item in cart_items %}
+            <div class="cart-item">
+                <div class="item-img" style="background: #e0e0e0;"></div>
+                <div class="item-info">
+                    <h3>{{ item.product.name }}</h3>
+                    <p>{{ item.product.size }}</p>
+                    <div class="item-price">{{ item.product.price }} ₽</div>
+                </div>
+                <div class="item-controls">
+                    <button>-</button> <span>{{ item.quantity }}</span> <button>+</button>
+                </div>
+                <div class="item-total">{{ item.get_total }} ₽</div>
+                <button class="remove-btn">×</button>
+            </div>
+            {% endfor %}
+        </div>
+
+        <aside class="cart-summary">
+            <h3>ИТОГО</h3>
+            <div class="summary-line"><span>Товары (3)</span> <span>6 770 ₽</span></div>
+            <div class="summary-line"><span>Доставка</span> <span>бесплатно</span></div>
+            <hr>
+            <div class="summary-total"><span>ИТОГО</span> <span>6 770 ₽</span></div>
+            <button class="btn-checkout">ОФОРМИТЬ ЗАКАЗ</button>
+            <button class="btn-continue">ПРОДОЛЖИТЬ ПОКУПКИ</button>
+            <input type="text" placeholder="Промокод">
+        </aside>
+    </div>
+</div>
+{% endblock %}

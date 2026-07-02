@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="catalog-page wrapper">
+<link rel="stylesheet" href="{% static 'catalog/catalog.css' %}">
+    <aside class="filters">
+        <h3>КАТЕГОРИИ</h3>
+        <ul class="filter-list">
+            <li><input type="radio" name="cat" checked> Все постеры</li>
+            <li><input type="radio" name="cat"> Абстракция</li>
+            <li><input type="radio" name="cat"> Природа</li>
+            <li><input type="radio" name="cat"> Автомобили</li>
+            <li><input type="radio" name="cat"> Город</li>
+            <li><input type="radio" name="cat"> Люди</li>
+            <li><input type="radio" name="cat"> Минимализм</li>
+        </ul>
+
+        <h3>РАЗМЕР</h3>
+        <ul class="filter-list">
+            <li><input type="checkbox"> 21x30 см</li>
+            <li><input type="checkbox"> 40x50 см</li>
+            <li><input type="checkbox"> 50x70 см</li>
+            <li><input type="checkbox"> 61x91 см</li>
+            <li><input type="checkbox"> 70x100 см</li>
+        </ul>
+
+        <h3>ОРИЕНТАЦИЯ</h3>
+        <ul class="filter-list">
+            <li><input type="checkbox"> Вертикальная</li>
+            <li><input type="checkbox"> Горизонтальная</li>
+        </ul>
+    </aside>
+
+    <section class="products-area">
+        <div class="sorting-bar">
+            <span>Сортировка: <b>По популярности</b></span>
+            <div class="view-icons">
+                <span class="active">⊞</span> <span>☰</span>
+            </div>
+        </div>
+
+        <div class="products-grid">
+            {% for i in "12345678"|make_list %}
+            <div class="product-card">
+                <div class="heart-icon" data-id="{{ i }}"><i data-lucide="heart"></i></div>
+                <div class="img-placeholder" style="background: #e0e0e0; height: 250px; border-radius: 8px;"></div>
+                <h3>Название постера</h3>
+                <p>50x70 см</p>
+                <div class="price">2 190 ₽</div>
+                <button class="btn-cart">В корзину</button>
+            </div>
+            {% endfor %}
+        </div>
+
+        <div class="pagination">
+            <span class="page-num">1</span>
+            <span class="page-num">2</span>
+            <span class="page-num">3</span>
+            <span>...</span>
+            <span class="page-num">8</span>
+        </div>
+    </section>
+</div>
+{% endblock %}

@@ -48,6 +48,8 @@ button {
     cursor: pointer; 
 }
 
+
+
 /* Блок статистики под кнопками */
 .banner-stats { 
     display: flex; 
@@ -125,7 +127,6 @@ button {
     justify-content: space-between; 
     align-items: center; 
     margin-bottom: 20px; 
-    text-decoration: none;
 }
 
 .hits-grid { 
@@ -154,12 +155,16 @@ button {
 }
 
 /* Карточка*/
+/* Карточка */
 .product-card { 
+    position: relative; /* ВАЖНО: это привязывает сердечко к карточке */
     background: #fff; 
     padding: 15px; 
     border-radius: 10px; 
     text-align: center; 
     border: 1px solid #eee; 
+    display: flex; /* Для нормального выравнивания контента */
+    flex-direction: column;
 }
 
 .img-placeholder { 
@@ -168,14 +173,19 @@ button {
     margin-bottom: 10px; 
 }
 
-.btn-cart { 
+.btn-cart {
+    margin-top: 10px;
+    padding: 10px;
     background: #d81b60;
-    color: white; 
-    border: none; 
-    padding: 10px; 
-    width: 100%; 
-    cursor: pointer; 
-    border-radius: 4px; 
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-cart:hover {
+    background: #ad1457;
 }
 
 /* Стили для рассылки */
@@ -214,4 +224,11 @@ button {
     border-radius: 20px;
     border: 1px solid #eee;
 }
+
+
+.hits {
+    /* Это создаст "отступ" при переходе по якорю */
+    scroll-margin-top: 100px; 
+}
+
 

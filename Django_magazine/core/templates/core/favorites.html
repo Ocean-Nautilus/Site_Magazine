@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'core/core.css' %}">
+
+<div class="wrapper">
+    <div class="hits-header">
+        <h2>ИЗБРАННЫЕ</h2>
+    </div>
+    <div class="hits-grid">
+        <div class="product-card">
+            <div class="img-placeholder"></div>
+            <h3>F1 Audi Revolut</h3>
+            <p class="price">400 ₽</p>
+            <button class="btn-cart">В корзину</button>
+        </div>
+        <div class="product-card">
+            <div class="img-placeholder"></div>
+            <h3>F1 Шарль Леклер</h3>
+            <p class="price">400 ₽</p>
+            <button class="btn-cart">В корзину</button>
+        </div>
+                <div class="product-card">
+            <div class="img-placeholder"></div>
+            <h3>БР БР ПАТАПИМ</h3>
+            <p class="price">400 ₽</p>
+            <button class="btn-cart">В корзину</button>
+        </div>
+        <div class="product-card">
+            <div class="img-placeholder"></div>
+            <h3>НЕ БР БР ПАТАПИМ</h3>
+            <p class="price">400 ₽</p>
+            <button class="btn-cart">В корзину</button>
+        </div>
+                <div class="product-card">
+            <div class="img-placeholder"></div>
+            <h3>ДРУГОЙ ПАТАПИМ</h3>
+            <p class="price">400 ₽</p>
+            <button class="btn-cart">В корзину</button>
+        </div>
+        <div class="product-card">
+            <div class="img-placeholder"></div>
+            <h3>ПАТАПИМ БЕЗ БР БР</h3>
+            <p class="price">400 ₽</p>
+            <button class="btn-cart">В корзину</button>
+        </div>
+    </div>
+</div>
+{% endblock %}
